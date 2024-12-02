@@ -1,7 +1,9 @@
 import React, { Component } from "react";
+import "./App.css";
+import BoxClass from "./component/BoxClass";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icons } from "./component/icons";
-import Box from "./component/Box.js";
+
 
 export default class AppClass extends Component {
   choice = {
@@ -96,13 +98,13 @@ export default class AppClass extends Component {
             <button onClick={() => this.replay()}>RESET</button>
           </div>
           <div className="main">
-            <Box
+            <BoxClass
               user="Computer"
               item={this.state.computerSelect}
               result={this.state.result}
             />
             <span className="line"></span>
-            <Box
+            <BoxClass
               user="You"
               item={this.state.userSelect}
               result={this.state.result}
